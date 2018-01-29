@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Cadastro de Currículo</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	</head>
+	<body>
+
+		<h1>Cadastro de Currículo</h1>
+
+		<form id="form">
+			<fieldset>
+				<legend>Informações Pessoais</legend>
+					<div>
+						<label for="nome_id">Nome:</label>
+						<input id="nome_id" type="text" name="nome" placeholder="Digite o seu nome aqui">
+					</div>
+					<div>
+						<label for="email_id">E-mail:</label>
+						<input id="email_id" type="text" placeholder="Digite o seu e-mail aqui"/>
+					</div>
+					<div>
+						<label for="datadenascimento_id">Data de Nascimento:</label>
+						<input id="datadenascimento_id" name="data" type="date">
+					</div>
+					<div>
+						<label for="altura_id">Altura(m):</label>
+						<input id="altura_id" type="number" name="altura">
+					</div>
+					<div>
+						<label for="site_id">Site:</label>
+						<input id="site_id" type="text" name="site" placeholder="Facebook, Linkedin, Instagram">
+					</div>
+					<div>
+						<label for="estadocivil_id">Estado Civil:</label>
+						<select id="estadocivil_id" name="Estado Civil">
+							<option value="casado">Casado(a)</option>
+							<option value="solteiro">Solteiro(a)</option>
+							<option value="divorciado">Divorciado(a)</option>
+							<option value="viuvo">Viuvo(a)</option>
+						</select>
+					</div>
+					<div>
+						<label for="sexomasc_id">Masculino</label>
+						<input id="sexomasc_id" type="radio" value="masculino" name="sexo">
+						<label for="sexofem_id">Feminino</label>
+						<input id="sexofem_id" type="radio" value="feminino" name="sexo">
+					</div>
+			</fieldset>
+		</form>
+
+		<button>
+			<img src="botao.png" alt="Botão" onclick="enviarFormulario()">
+		</button>
+	</body>
+</html>
+
+<script type="text/javascript">
+
+	function enviarFormulario(){
+		alert("Enviando");
+
+		$.ajax
+		(
+			{
+				contentType: 'application/json',
+				data: JSON.stringify( 
+					{
+						"nome"  : $("#nome_id").val(),
+						"email" : $("#email_id").val(), 
+						"site" : $("#site_id").val(), 
+						"altura" : $("#altura_id").val(), 
+						"sexo" : $("#sexomasc_id").val(),
+						"estadoCivil" : $("#estadocivil_id").val(), 
+						"dataNascimento" : $("#datadenascimento_id").val()
+					}
+				),
+				dataType: 'json',
+				type: 'POST',
+				url: 'http://127.0.0.1:9099/api-curriculum/novo',
+				async: false,
+				success: function(data) {
+					alert("Sucesso, id é: " + data.id);
+				},
+				error: function(msg) {
+					alert("Erro genérico");
+				}
+			}
+		);
+	}
+</script>
