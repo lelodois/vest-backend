@@ -1,17 +1,17 @@
-# Rest Integração
+# Backend Java Springboot
 
-### Preço - Cadastro  
-Projeto com informações cadastrais da produto filial  
-Run PrecoCadastroApplication.java http://localhost:9083/swagger-ui.html  
+### Springboot
+Projeto simples que recebe um json de um simples html
 
 ## Arquitetura
 
 * RestAPI
 * Java 8
 * Maven
-* Spring boot / Mvc / Event
+* Spring boot
 * Tomcat embedded
 * Hibernate
 * Swagger
 * H2
-* Fluent Http
+* Jackson
+* Html
