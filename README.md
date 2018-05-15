@@ -1,4 +1,4 @@
-# Backend Java Springboot
+# JavaAngular Modern App
 
 ### Springboot
 Projeto de cadastro de task com Angular de front end e Springboot de backend
