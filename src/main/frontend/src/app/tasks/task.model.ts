@@ -1,9 +1,8 @@
-export class Task{
+export class Task {
 
-    constructor(public id:number, 
-                public name : string, 
-                public completed:boolean, 
-                public type:string){
-
+    constructor(public id: number,
+                public name: string,
+                public completed: boolean,
+                public type: string) {
     }
 }

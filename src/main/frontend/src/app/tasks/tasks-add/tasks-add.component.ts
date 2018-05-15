@@ -9,19 +9,19 @@ import { Task } from '../task.model';
 })
 export class TasksAddComponent implements OnInit {
 
-  addTaskValue : string = null;
+  addTaskValue: string = null;
 
-  constructor(private service : TasksService){
+  constructor(private service: TasksService) {
   }
 
   ngOnInit() {
   }
 
-  onTaskAdd(event){
-    let task = new Task(undefined, 
-                        event.target.value, 
-                        false, 
-                        "Tipo padrão");
+  onTaskAdd(event) {
+    const task = new Task(undefined,
+                        event.target.value,
+                        false,
+                        'Tipo padrão');
 
     this.service.saveTask(task, false)
       .subscribe((newTask: Task) => {
@@ -30,5 +30,4 @@ export class TasksAddComponent implements OnInit {
       }
     );
   }
-
 }

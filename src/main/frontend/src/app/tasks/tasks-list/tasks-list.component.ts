@@ -9,16 +9,16 @@ import { Task } from '../task.model';
 })
 export class TasksListComponent implements OnInit {
 
-  tasks : Task[] = [];
-  
-  constructor(private service : TasksService){
+  tasks: Task[] = [];
+
+  constructor(private service: TasksService) {
   }
 
   ngOnInit() {
     this.service.getTasks()
-      .subscribe( 
-        (tasks : any[]) => {
-          this.tasks = tasks
+      .subscribe(
+        (tasks: any[]) => {
+          this.tasks = tasks;
         },
         (error) => console.log('Erro desconhecido', error)
       );
@@ -26,15 +26,15 @@ export class TasksListComponent implements OnInit {
     this.service.taskAddedEvent
       .subscribe(
         (task: Task) => this.tasks.push(task)
-    )
+    );
 }
 
-  getTaskLabel(task:Task){
+  getTaskLabel(task: Task) {
     return task.completed ? 'Finalizada' : 'Em andamento';
   }
 
 
-  onTaskChanged(event, task:Task){
+  onTaskChanged(event, task: Task) {
     this.service.saveTask(task, event.target.checked).subscribe();
   }
 
