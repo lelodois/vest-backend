@@ -34,5 +34,6 @@ Projeto de cadastro de task com Angular de front end e Springboot de backend
   *	sudo npm install portfinder
   * sudo npm install --save bootstrap@4.0.0-alpha.6
   * npm start
+  * ng serve --proxy-config proxy-conf.json
 
 
