@@ -25,8 +25,7 @@ Projeto de cadastro de task com Angular de front end e Springboot de backend
 ** sudo npm install -g typescript
 
 ### Backend
-  * mvn install
-  * java -jar target/spring-angular-1.0.0.jar 
+  * mvn install && java -jar target/spring-angular-1.0.0.jar
 
 ### Frontend
   * cd  src/main/frontend
