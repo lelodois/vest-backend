@@ -13,13 +13,13 @@ export class TasksService{
     }
 
     getTasks() {
-        let tasks = this.http.get("http://localhost:9099/api/tasks/");
+        let tasks = this.http.get("/api/tasks/");
         return tasks.map(response => response.json())
     }
     
     saveTask(task : Task, completed : boolean){
         task.completed = completed;
-        let post = this.http.post('http://localhost:9099/api/tasks/save', task);
+        let post = this.http.post('/api/tasks/save', task);
         return post.map(response => response.json());
     }
 }

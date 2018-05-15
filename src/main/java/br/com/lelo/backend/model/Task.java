@@ -9,48 +9,48 @@ import org.hibernate.validator.constraints.NotBlank;
 @Entity
 public class Task {
 
-    @Id
-    @GeneratedValue
-    private Long id;
+	@Id
+	@GeneratedValue
+	private Long id;
 
-    @NotBlank
-    private String name;
+	@NotBlank
+	private String name;
 
-    private boolean completed;
+	private boolean completed;
 
-    @NotBlank
-    private String dueDate;
+	@NotBlank
+	private String type;
 
-    public Long getId() {
-        return id;
-    }
+	public Long getId() {
+		return id;
+	}
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+	public void setId(Long id) {
+		this.id = id;
+	}
 
-    public String getDueDate() {
-        return dueDate;
-    }
+	public String getName() {
+		return name;
+	}
 
-    public String getName() {
-        return name;
-    }
+	public void setCompleted(boolean completed) {
+		this.completed = completed;
+	}
 
-    public void setCompleted(boolean completed) {
-        this.completed = completed;
-    }
+	public boolean isCompleted() {
+		return completed;
+	}
 
-    public boolean isCompleted() {
-        return completed;
-    }
+	public String getType() {
+		return type;
+	}
 
-    public void setDueDate(String dueDate) {
-        this.dueDate = dueDate;
-    }
+	public void setType(String type) {
+		this.type = type;
+	}
 
-    public void setName(String name) {
-        this.name = name;
-    }
+	public void setName(String name) {
+		this.name = name;
+	}
 
 }

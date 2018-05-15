@@ -21,7 +21,8 @@ export class TasksAddComponent implements OnInit {
     let task = new Task(undefined, 
                         event.target.value, 
                         false, 
-                        new Date().toDateString());
+                        "Tipo padrão");
+
     this.service.saveTask(task, false)
       .subscribe((newTask: Task) => {
         this.addTaskValue = ' ';

@@ -29,7 +29,7 @@ export class TasksListComponent implements OnInit {
     )
 }
 
-  getDueDateLabel(task:Task){
+  getTaskLabel(task:Task){
     return task.completed ? 'Finalizada' : 'Em andamento';
   }
 
