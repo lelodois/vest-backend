@@ -1,7 +1,7 @@
 # Backend Java Springboot
 
 ### Springboot
-Projeto simples que recebe um json de um simples html
+Projeto de cadastro de task com Angular de front end e Springboot de backend
 
 ## Arquitetura
 
@@ -14,4 +14,7 @@ Projeto simples que recebe um json de um simples html
 * Swagger
 * H2
 * Jackson
-* Html
+* Angular 4
+* Bootstrap
+
+
