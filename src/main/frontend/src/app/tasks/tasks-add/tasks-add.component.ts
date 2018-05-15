@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { TasksService } from '../task.service';
 import { Task } from '../task.model';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-tasks-add',
@@ -9,25 +10,26 @@ import { Task } from '../task.model';
 })
 export class TasksAddComponent implements OnInit {
 
-  addTaskValue: string = null;
+  task: Task = new Task();
+  taskForm : FormGroup;
 
   constructor(private service: TasksService) {
   }
 
   ngOnInit() {
+    this.taskForm = new FormGroup({
+      name: new FormControl('', Validators.required),
+      definitionOfDone: new FormControl('', Validators.required),
+      participantes: new FormControl('', Validators.required)
+    });
   }
 
-  onTaskAdd(event) {
-    const task = new Task(undefined,
-                        event.target.value,
-                        false,
-                        'Tipo padrão');
-
-    this.service.saveTask(task, false)
-      .subscribe((newTask: Task) => {
-        this.addTaskValue = ' ';
-        this.service.taskAddedEvent.emit(newTask);
-      }
-    );
+  save(){
+    this.service.saveTask(this.task)
+                .subscribe(
+                  (newTask: Task) => {
+                  this.service.taskAddedEvent.emit(newTask);
+                }
+          );
   }
 }

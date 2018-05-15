@@ -1,8 +1,75 @@
-<div class="form-group">
-  <input type="text" 
-         class="form-control"
-         placeholder="Nome da nova task"
-         (keyup.enter)="onTaskAdd($event)"
-         ([ngModel])="addTaskValue"
-         />
+<div>
+  <form [formGroup]="taskForm" (ngSubmit)="save()">
+    <div class="form-group">
+      <label for="name">O que iremos fazer...</label>
+      <input  type="email" class="form-control" id="name"
+              [(ngModel)]="task.name" formControlName="name"
+              placeholder="Descrição da task" aria-describedby="emailHelp" >
+    </div>
+
+    <div class="form-group">
+      <label for="selTaskType">Definition of Done</label>
+      <select class="form-control" 
+              [(ngModel)]= "task.definitionOfDone" formControlName="definitionOfDone"
+              id="selTaskType">
+        <option>Selecione</option>
+        <option>Homologação</option>
+        <option>PR aprovado</option>
+        <option>PR realizado</option>
+        <option>Produção</option>
+        <option>Testes unitários</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="selMultiplePerson">Participantes</label>
+      <select multiple 
+              class="form-control"
+              [(ngModel)]= "task.participantes" formControlName="participantes"
+              id="selMultiplePerson">
+        <option>Priscila High Patterns</option>
+        <option>Marcelo Javascou</option>
+        <option>Lucas Jhon Assembly</option>
+        <option>Silvio Pascal</option>
+        <option>Joana Angular</option>
+      </select>
+    </div>
+    <fieldset class="form-group">
+      <div class="form-check has-success">
+        <label class="form-check-label">
+          <input type="radio" class="form-check-input" name="optionsRadios" 
+                id="optionsRadios1" value="FACIL" checked>
+            ;) Entregaremos sem dificuldades 
+        </label>
+      </div>
+      <div class="form-check">
+      <label class="form-check-label">
+          <input type="radio" class="form-check-input" name="optionsRadios" 
+                id="optionsRadios2" value="POSSIVEL">
+            :) Entregaremos, mas com dificuldades 
+        </label>
+      </div>
+      <div class="form-check disabled">
+      <label class="form-check-label">
+          <input type="radio" class="form-check-input" name="optionsRadios" 
+                id="optionsRadios3" value="IMPOSSIVEL">
+            :( Não conseguiremos entregar
+        </label>
+      </div>
+    </fieldset>
+    <div class="form-group">
+      <label for="inputDate" class="col-2 col-form-label">Conclusão</label>
+      <div class="col-10">
+        <input class="form-control" type="date" value="2011-08-19" id="inputDate">
+      </div>
+    </div>
+    <div class="form-check">
+      <label class="form-check-label">
+        <input type="checkbox" 
+               class="form-check-input"
+               [(ngModel)]= "task.concordancia" formControlName="concordancia">
+          Concordo com e estou comprometido
+      </label>
+    </div>
+    <button type="submit" class="btn btn-primary">Concluir</button>
+  </form>
 </div>

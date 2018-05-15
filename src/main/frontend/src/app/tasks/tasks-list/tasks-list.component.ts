@@ -30,12 +30,12 @@ export class TasksListComponent implements OnInit {
 }
 
   getTaskLabel(task: Task) {
-    return task.completed ? 'Finalizada' : 'Em andamento';
+    return task.concordancia ? 'Assinou embaixo' : 'Não concordou';
   }
 
 
   onTaskChanged(event, task: Task) {
-    this.service.saveTask(task, event.target.checked).subscribe();
+    task.concordancia = event.target.checked;
+    this.service.saveTask(task).subscribe();
   }
-
 }

@@ -17,8 +17,7 @@ export class TasksService {
         return tasks.map(response => response.json());
     }
 
-    saveTask(task: Task, completed: boolean) {
-        task.completed = completed;
+    saveTask(task: Task) {
         const post = this.http.post('/api/tasks/save', task);
         return post.map(response => response.json());
     }

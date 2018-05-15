@@ -1,19 +1,25 @@
-<ul class="list-group">
-  <li *ngFor="let task of tasks" class="list-group-item">
-    <div class="task-checkbox">
-      <input type="checkbox"
-             class="list-child"
-             (change)="onTaskChanged($event, task)"
-             [checked]="task.completed"/>
-
-      <span ngClass="{{ task.completed ? 'name completed' : 'name' }}">
-        {{ task.name }}
-      </span>
-
-      <span class="label pull-right">
-          {{ task.type }} - {{ getTaskLabel(task) }}
-      </span>
-  
+<div class="container">
+  <div *ngFor="let task of tasks" class="row">
+    <div class="col-xs-12 col-sm-6">
+      <div class="row">
+        <div class="col-xs-1 col-sm-1">
+          <i class="glyphicon glyphicon-edit"></i>
+        </div>
+        <div class="col-xs-3 col-sm-3">
+          {{ task.name }}
+        </div>
+        <div class="col-xs-3 col-sm-3">
+          {{ task.definitionOfDone }}
+        </div>
+        <div class="col-xs-4 col-sm-4">
+            <input type="checkbox"
+                   class="list-child"
+                   [(ngModel)]= "task.concordancia"
+                   (change)="onTaskChanged($event, task)"
+                   [checked]="task.concordancia"/>
+          {{ getTaskLabel(task) }}
+        </div>
+      </div>
     </div>
-  </li>
-</ul>
+  </div>
+</div>
