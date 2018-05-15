@@ -23,8 +23,7 @@ export class TasksListComponent implements OnInit {
         (error) => console.log('Erro desconhecido', error)
       );
 
-    this.service.taskAddedEvent
-      .subscribe(
+    this.service.taskAddedEvent.subscribe(
         (task: Task) => this.tasks.push(task)
     );
 }
@@ -33,7 +32,10 @@ export class TasksListComponent implements OnInit {
     return task.concordancia ? 'Assinou embaixo' : 'Não concordou';
   }
 
-
+  onTaskEdit(task: Task) {
+    this.service.taskEditEvent.emit(task);
+  }
+  
   onTaskChanged(event, task: Task) {
     task.concordancia = event.target.checked;
     this.service.saveTask(task).subscribe();

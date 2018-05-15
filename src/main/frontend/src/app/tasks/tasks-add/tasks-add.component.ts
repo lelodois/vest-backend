@@ -20,8 +20,13 @@ export class TasksAddComponent implements OnInit {
     this.taskForm = new FormGroup({
       name: new FormControl('', Validators.required),
       definitionOfDone: new FormControl('', Validators.required),
-      participantes: new FormControl('', Validators.required)
+      participantes: new FormControl('', Validators.required),
+      concordancia: new FormControl('', Validators.required)
     });
+
+    this.service.taskEditEvent.subscribe(
+      (toEditTask: Task) => this.task = toEditTask
+    );
   }
 
   save(){

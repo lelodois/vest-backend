@@ -3,6 +3,7 @@ package br.com.lelo.backend.controller;
 import javax.validation.Valid;
 
 import org.apache.commons.lang3.StringUtils;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -29,7 +30,14 @@ public class TaskController {
 	@PostMapping(value = "/api/tasks/save")
 	public Task novo(@Valid @RequestBody Task task) throws Exception {
 		task.setName(StringUtils.capitalize(task.getName().toLowerCase()));
-		return repository.save(task);
+
+		if (task.getId() != null) {
+			Task taskWork = repository.getOne(task.getId());
+			BeanUtils.copyProperties(task, taskWork, new String[] { "id" });
+			return repository.save(taskWork);
+		} else {
+			return repository.save(task);
+		}
 	}
 
 }

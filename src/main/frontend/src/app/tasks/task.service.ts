@@ -8,6 +8,7 @@ import { HttpClient, HttpRequest } from 'selenium-webdriver/http';
 export class TasksService {
 
     taskAddedEvent = new EventEmitter<Task>();
+    taskEditEvent = new EventEmitter<Task>();
 
     constructor(private http: Http) {
     }
