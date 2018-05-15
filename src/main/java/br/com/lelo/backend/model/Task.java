@@ -4,7 +4,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
-import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.NotBlank;
 
 @Entity
@@ -15,14 +14,12 @@ public class Task {
     private Long id;
 
     @NotBlank
-    private String nome;
+    private String name;
+
+    private boolean completed;
 
     @NotBlank
-    @Email
-    private String email;
-
-    @NotBlank
-    private String dataNascimento;
+    private String dueDate;
 
     public Long getId() {
         return id;
@@ -32,27 +29,28 @@ public class Task {
         this.id = id;
     }
 
-    public String getNome() {
-        return nome;
+    public String getDueDate() {
+        return dueDate;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public String getName() {
+        return name;
     }
 
-    public String getEmail() {
-        return email;
+    public void setCompleted(boolean completed) {
+        this.completed = completed;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public boolean isCompleted() {
+        return completed;
     }
 
-    public String getDataNascimento() {
-        return dataNascimento;
+    public void setDueDate(String dueDate) {
+        this.dueDate = dueDate;
     }
 
-    public void setDataNascimento(String dataNascimento) {
-        this.dataNascimento = dataNascimento;
+    public void setName(String name) {
+        this.name = name;
     }
+
 }

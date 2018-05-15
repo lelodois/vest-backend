@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TasksService } from '../task.service';
 import { Task } from '../task.model';
-import { Observable } from 'rxjs/Observable';
 
 @Component({
   selector: 'app-tasks-list',
@@ -10,28 +9,33 @@ import { Observable } from 'rxjs/Observable';
 })
 export class TasksListComponent implements OnInit {
 
-  tasks;
+  tasks : Task[] = [];
   
   constructor(private service : TasksService){
   }
 
   ngOnInit() {
-    return this.service.getTasks()
+    this.service.getTasks()
       .subscribe( 
-        (tasks : Observable<Task>) => {
+        (tasks : any[]) => {
           this.tasks = tasks
         },
         (error) => console.log('Erro desconhecido', error)
       );
+
+    this.service.taskAddedEvent
+      .subscribe(
+        (task: Task) => this.tasks.push(task)
+    )
 }
 
   getDueDateLabel(task:Task){
-    return task.completed ? 'label-success' : 'label-primary';
+    return task.completed ? 'Finalizada' : 'Em andamento';
   }
 
 
   onTaskChanged(event, task:Task){
-    this.service.saveTask(task, event.target.checked);
+    this.service.saveTask(task, event.target.checked).subscribe();
   }
 
 }

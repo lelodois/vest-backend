@@ -10,8 +10,8 @@
         {{ task.name }}
       </span>
 
-      <span class="label {{ getDueDateLabel(task) }} pull-right">
-          {{ task.dueDate }}
+      <span class="label pull-right">
+          {{ task.dueDate }} - {{ getDueDateLabel(task) }}
       </span>
   
     </div>
