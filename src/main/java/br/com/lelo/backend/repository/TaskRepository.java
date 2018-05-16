@@ -7,4 +7,6 @@ import br.com.lelo.backend.model.Task;
 
 @Repository
 public interface TaskRepository extends JpaRepository<Task, Long> {
+
+	Task findByName(String name);
 }

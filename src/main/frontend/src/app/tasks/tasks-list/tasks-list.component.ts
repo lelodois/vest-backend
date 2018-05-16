@@ -15,18 +15,25 @@ export class TasksListComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.getTasks();
+
+    this.service.taskAddedEvent.subscribe(
+      (task: Task) => {
+        this.getTasks()
+      }
+    );
+  }
+
+  getTasks(){
     this.service.getTasks()
       .subscribe(
         (tasks: any[]) => {
           this.tasks = tasks;
         },
         (error) => console.log('Erro desconhecido', error)
-      );
+      )
+  }
 
-    this.service.taskAddedEvent.subscribe(
-        (task: Task) => this.tasks.push(task)
-    );
-}
 
   getTaskLabel(task: Task) {
     return task.concordancia ? 'Assinou embaixo' : 'Não concordou';

@@ -1,5 +1,11 @@
 <div>
   <form [formGroup]="taskForm" (ngSubmit)="save()">
+
+    <div *ngIf="task.id != null" class="form-group">
+        <label for="name">Código da Task</label>
+        <input class="form-control" type="text" disabled  value="{{ task.id }}"/>
+    </div>
+
     <div class="form-group">
       <label for="name">O que iremos fazer...</label>
       <input  type="email" class="form-control" id="name"

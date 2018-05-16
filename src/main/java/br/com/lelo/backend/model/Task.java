@@ -41,6 +41,13 @@ public class Task {
 	@Column(name = "name")
 	private Set<String> participantes;
 
+	public Task() {
+	}
+
+	public Task(String name) {
+		this.name = name;
+	}
+
 	public String getDefinitionOfDone() {
 		return definitionOfDone;
 	}
