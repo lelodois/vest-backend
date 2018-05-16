@@ -20,9 +20,7 @@ Projeto de cadastro de task com Angular de front end e Springboot de backend
 ## Setup
 
 [required] 
-** sudo apt-get install nodejs
-** sudo apt install npm
-** sudo npm install -g typescript
+** sudo apt-get install nodejs && sudo apt install npm && sudo npm install -g typescript
 
 ### Backend
   * mvn install && java -jar target/spring-angular-1.0.0.jar
@@ -30,9 +28,9 @@ Projeto de cadastro de task com Angular de front end e Springboot de backend
 ### Frontend
   * cd  src/main/frontend
   * sudo npm install -g @angular/cli@1.4.10
+  * sudo npm install --save bootstrap@3.3.7
   * sudo npm install reflect-metadata
   *	sudo npm install portfinder
-  * sudo npm install --save bootstrap@4.0.0-alpha.6
   * npm start
   * ng serve --proxy-config proxy-conf.json
 
