@@ -4,7 +4,7 @@ import br.com.lelo.vestibular.empresa.service.EmpresaQueryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -25,7 +25,7 @@ public class EmpresaApi {
 
     @CrossOrigin(origins = "*")
     @GetMapping("/api/empresas/{codigoEmpresa}")
-    public Iterable<Empresa> findByCodigo(@RequestParam(value = "codigoEmpresa") Long codigoEmpresa) {
+    public Iterable<Empresa> findByCodigo(@PathVariable(value = "codigoEmpresa") Long codigoEmpresa) {
         return query.empresasFindByCodigo(codigoEmpresa);
     }
 

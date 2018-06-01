@@ -22,8 +22,8 @@ public class CicloApi {
         return command.save(task);
     }
 
-    @GetMapping(value = "/api/ciclos/empresa/{codigoEmpresa}")
-    public Iterable<Ciclo> findByEmpresa(@RequestParam(value = "codigoEmpresa") Long codigoEmpresa) throws Exception {
+    @GetMapping("/api/ciclos/empresa/{codigoEmpresa}")
+    public Iterable<Ciclo> findByEmpresa(@PathVariable(value = "codigoEmpresa") Long codigoEmpresa) throws Exception {
         return query.ciclosFindByCodigoEmpresa(codigoEmpresa);
     }
 
