@@ -2,11 +2,11 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>br.com.lelo.backend</groupId>
-	<artifactId>spring-angular</artifactId>
+	<groupId>br.com.lelo</groupId>
+	<artifactId>vestibular-backend</artifactId>
 	<packaging>jar</packaging>
 	<version>1.0.0</version>
-	<name>backend-springboot</name>
+	<name>vestibular-backend</name>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
