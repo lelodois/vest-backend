@@ -1,16 +1,19 @@
-package br.com.lelo.vestibular.empresa.domain;
+package br.com.lelo.vestibular.empresa.service;
 
+import br.com.lelo.vestibular.empresa.domain.Empresa;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import br.com.lelo.vestibular.empresa.Empresa;
-
 @Service
 public class EmpresaQueryService {
 
-    @Autowired
     private EmpresaRepository empresaRepository;
+
+    @Autowired
+    public EmpresaQueryService(EmpresaRepository empresaRepository) {
+        this.empresaRepository = empresaRepository;
+    }
 
     @Transactional(readOnly = true)
     public boolean empresasIsEmpty() {
@@ -22,4 +25,8 @@ public class EmpresaQueryService {
         return empresaRepository.findAll();
     }
 
+    @Transactional(readOnly = true)
+    public Iterable<Empresa> empresasFindByCodigo(Long codigoEmpresa) {
+        return empresaRepository.findByCodigoEmpresa(codigoEmpresa);
+    }
 }

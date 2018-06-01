@@ -1,22 +1,24 @@
 package br.com.lelo.vestibular;
 
-import javax.annotation.PostConstruct;
-
+import br.com.lelo.vestibular.empresa.domain.Empresa;
+import br.com.lelo.vestibular.empresa.service.EmpresaCommandService;
+import br.com.lelo.vestibular.empresa.service.EmpresaQueryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import br.com.lelo.vestibular.empresa.Empresa;
-import br.com.lelo.vestibular.empresa.domain.EmpresaCommandService;
-import br.com.lelo.vestibular.empresa.domain.EmpresaQueryService;
+import javax.annotation.PostConstruct;
 
 @Component
-public class EmpresaInitializer {
+public class EmpresaConfiguration {
 
-    @Autowired
     private EmpresaCommandService command;
+    private EmpresaQueryService query;
 
     @Autowired
-    private EmpresaQueryService query;
+    public EmpresaConfiguration(EmpresaCommandService command, EmpresaQueryService query) {
+        this.command = command;
+        this.query = query;
+    }
 
     @PostConstruct
     public void initializer() {

@@ -1,4 +1,4 @@
-package br.com.lelo.vestibular.empresa;
+package br.com.lelo.vestibular.empresa.domain;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

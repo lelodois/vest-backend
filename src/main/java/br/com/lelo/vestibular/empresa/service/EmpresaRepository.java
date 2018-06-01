@@ -1,11 +1,10 @@
-package br.com.lelo.vestibular.empresa.domain;
+package br.com.lelo.vestibular.empresa.service;
 
-import java.util.List;
-
+import br.com.lelo.vestibular.empresa.domain.Empresa;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.Repository;
 
-import br.com.lelo.vestibular.empresa.Empresa;
+import java.util.List;
 
 @org.springframework.stereotype.Repository
 interface EmpresaRepository extends Repository<Empresa, Long> {
@@ -17,4 +16,5 @@ interface EmpresaRepository extends Repository<Empresa, Long> {
 
     Empresa save(Empresa empresa);
 
+    Iterable<Empresa> findByCodigoEmpresa(Long codigoEmpresa);
 }

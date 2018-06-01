@@ -1,4 +1,4 @@
-package br.com.lelo.vestibular.ciclo;
+package br.com.lelo.vestibular.ciclo.domain;
 
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -7,7 +7,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
-import br.com.lelo.vestibular.empresa.Empresa;
+import br.com.lelo.vestibular.empresa.domain.Empresa;
 
 @Entity
 public class Ciclo {
