@@ -32,11 +32,6 @@ Clone este projeto e execute o comando abaixo:
 
 * **Léo Costa** - *Initial work* - [Meu git](https://github.com/lelodois)
 
-### Acknowledgments
-
-* Fullstack evangelist
-* Real case
-
 ### Frontend
 
   [https://github.com/lelodois/vestibular-backend]
