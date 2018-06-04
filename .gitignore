@@ -23,6 +23,7 @@
 *.tar.gz
 *.rar
 /target
+/.idea
 /.settings
 src/main/node_modules/*
 
