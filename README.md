@@ -34,5 +34,5 @@ Clone este projeto e execute o comando abaixo:
 
 ### Frontend
 
-  [https://github.com/lelodois/vestibular-backend]
+* **Vestibular Frontend** - *Angular* - [Projeto](https://github.com/lelodois/vestibular-backend)
 
