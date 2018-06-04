@@ -1,9 +1,22 @@
-# JavaAngular Modern App
+# Vestibular Backend
 
-### Springboot
-Projeto de cadastro de task com Angular de front end e Springboot de backend
+Versão backend do sistema de vestibular
 
-## Arquitetura
+## Começando
+
+Clone este projeto e execute o comando abaixo:
+
+```
+  mvn install && java -jar target/spring-angular-1.0.0.jar
+```
+
+### Pré-requisitos
+
+```
+  Java 8
+  Maven
+```
+### Tecnologias
 
 * RestAPI
 * Java 8
@@ -14,24 +27,12 @@ Projeto de cadastro de task com Angular de front end e Springboot de backend
 * Swagger
 * H2
 * Jackson
-* Angular 4
-* Bootstrap
 
-## Setup
+## Autor
 
-[required] 
-** sudo apt-get install nodejs && sudo apt install npm && sudo npm install -g typescript
+* **Léo Costa** - *Initial work* - [Meu git](https://github.com/lelodois)
 
-### Backend
-  * mvn install && java -jar target/spring-angular-1.0.0.jar
+## Acknowledgments
 
-### Frontend
-  * cd  src/main/frontend
-  * sudo npm install -g @angular/cli@1.4.10
-  * sudo npm install --save bootstrap@3.3.7
-  * sudo npm install reflect-metadata
-  *	sudo npm install portfinder
-  * npm start
-  * ng serve --proxy-config proxy-conf.json
-
-
+* Fullstack evangelist
+* Real case
