@@ -28,11 +28,8 @@ Clone este projeto e execute o comando abaixo:
 * H2
 * Jackson
 
-### Autor
+### Em fim
 
 * **Léo Costa** - *Initial work* - [Meu git](https://github.com/lelodois)
-
-### Frontend
-
 * **Vestibular Frontend** - *Angular* - [Projeto](https://github.com/lelodois/vestibular-backend)
 
