@@ -2,6 +2,8 @@
 
 Versão backend do sistema de vestibular
 
+* ** Frontend ** - *Angular* - [Projeto](https://github.com/lelodois/vestibular-backend)
+
 ### Começando
 
 Clone este projeto e execute o comando abaixo:
@@ -28,8 +30,7 @@ Clone este projeto e execute o comando abaixo:
 * H2
 * Jackson
 
-### Em fim
+### Autor
 
 * **Léo Costa** - *Initial work* - [Meu git](https://github.com/lelodois)
-* **Vestibular Frontend** - *Angular* - [Projeto](https://github.com/lelodois/vestibular-backend)
 
