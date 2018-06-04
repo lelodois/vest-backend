@@ -16,5 +16,5 @@ interface EmpresaRepository extends Repository<Empresa, Long> {
 
     Empresa save(Empresa empresa);
 
-    Iterable<Empresa> findByCodigoEmpresa(Long codigoEmpresa);
+    Empresa findByCodigoEmpresa(Long codigoEmpresa);
 }

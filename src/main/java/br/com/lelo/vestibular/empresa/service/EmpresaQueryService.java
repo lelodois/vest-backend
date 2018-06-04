@@ -26,7 +26,7 @@ public class EmpresaQueryService {
     }
 
     @Transactional(readOnly = true)
-    public Iterable<Empresa> empresasFindByCodigo(Long codigoEmpresa) {
+    public Empresa empresaFindByCodigo(Long codigoEmpresa) {
         return empresaRepository.findByCodigoEmpresa(codigoEmpresa);
     }
 }

@@ -25,8 +25,8 @@ public class EmpresaApi {
 
     @CrossOrigin(origins = "*")
     @GetMapping("/api/empresas/{codigoEmpresa}")
-    public Iterable<Empresa> findByCodigo(@PathVariable(value = "codigoEmpresa") Long codigoEmpresa) {
-        return query.empresasFindByCodigo(codigoEmpresa);
+    public Empresa findByCodigo(@PathVariable(value = "codigoEmpresa") Long codigoEmpresa) {
+        return query.empresaFindByCodigo(codigoEmpresa);
     }
 
 }
