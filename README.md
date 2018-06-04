@@ -2,7 +2,7 @@
 
 Versão backend do sistema de vestibular
 
-* ** Frontend ** - *Angular* - [Projeto](https://github.com/lelodois/vestibular-backend)
+* ** Frontend ** - *Angular* - [Source code](https://github.com/lelodois/vestibular-frontend)
 
 ### Começando
 
