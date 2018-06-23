@@ -6,17 +6,21 @@ Versão backend do sistema de vestibular
 
 ### Começando
 
-Clone este projeto e execute o comando abaixo:
+Clone este projeto e execute os comandos abaixo na raiz do projeto:
 
 ```
-  mvn install && java -jar target/spring-angular-1.0.0.jar
+  mvn install
+  docker build -t vestibular-backend-docker .
+  docker run -d -p 9099:9099 vestibular-backend-docker
 ```
+
 
 ### Pré-requisitos
 
 ```
   Java 8
   Maven
+  Docker
 ```
 ### Tecnologias
 
@@ -29,6 +33,12 @@ Clone este projeto e execute o comando abaixo:
 * Swagger
 * H2
 * Jackson
+
+### Endpoints
+
+``` 
+http://localhost:9099/swagger-ui.html
+```
 
 ### Autor
 
