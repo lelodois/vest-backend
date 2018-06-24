@@ -28,7 +28,7 @@ Clone este projeto e execute os comandos abaixo na raiz do projeto:
 * Java 8
 * Maven
 * Spring boot
-* Tomcat embedded
+* Tomcat embeddede
 * Hibernate
 * Swagger
 * H2
