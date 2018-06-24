@@ -33,6 +33,7 @@ Clone este projeto e execute os comandos abaixo na raiz do projeto:
 * Swagger
 * H2
 * Jackson
+* JSON Web Tokens
 
 ### Endpoints
 
