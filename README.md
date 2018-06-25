@@ -8,8 +8,8 @@ Versão backend do sistema de vestibular
 
 ```
   mvn install
-  docker build -t vestibular-backend-docker .
-  docker run -d -p 9099:9099 vestibular-backend-docker
+  docker build -t vestback-docker .
+  docker run -d -p 9099:9099 vestback-docker
 ```
 
 
