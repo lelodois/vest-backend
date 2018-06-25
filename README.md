@@ -26,7 +26,6 @@ Versão backend do sistema de vestibular
 * Java 8
 * Maven
 * Spring boot
-* Tomcat embeddede
 * Hibernate
 * Swagger
 * H2
