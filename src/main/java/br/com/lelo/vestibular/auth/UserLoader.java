@@ -1,5 +1,6 @@
-package br.com.lelo.vestibular.auth.domain;
+package br.com.lelo.vestibular.auth;
 
+import br.com.lelo.vestibular.auth.domain.User;
 import br.com.lelo.vestibular.auth.service.UserCommandService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationListener;

@@ -1,4 +1,4 @@
-package br.com.lelo.vestibular;
+package br.com.lelo.vestibular.empresa;
 
 import br.com.lelo.vestibular.empresa.domain.Empresa;
 import br.com.lelo.vestibular.empresa.service.EmpresaCommandService;

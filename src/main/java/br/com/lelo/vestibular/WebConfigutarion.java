@@ -1,6 +1,8 @@
 package br.com.lelo.vestibular;
 
 import com.google.common.base.Predicate;
+import org.h2.server.web.WebServlet;
+import org.springframework.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
@@ -24,6 +26,13 @@ public class WebConfigutarion extends WebMvcConfigurerAdapter {
         registry.addResourceHandler("/webjars/**").addResourceLocations("classpath:/META-INF/resources/webjars/");
         registry.addResourceHandler("/**").addResourceLocations("classpath:/META-INF/resources/",
                 "classpath:/resources/", "classpath:/static/");
+    }
+
+    @Bean
+    public ServletRegistrationBean servletRegistrationBean() {
+        ServletRegistrationBean registration = new ServletRegistrationBean(new WebServlet());
+        registration.addUrlMappings("/console/*");
+        return registration;
     }
 
     @Bean
