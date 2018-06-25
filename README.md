@@ -4,9 +4,10 @@ Versão backend do sistema de vestibular
 
 * ** Frontend ** - *Angular* - [Source code](https://github.com/lelodois/vestibular-frontend)
 
-### Medium
-[Do front-end ao back-end usando Angular 4 e Java em containers docker](https://medium.com/@locosta_61043/do-front-end-ao-back-end-usando-angular-4-e-java-em-containers-docker-5d0eba0fcbcc)
+### Tutoriais
+- [Medium] [Do front-end ao back-end usando Angular 4 e Java em containers docker](https://medium.com/@locosta_61043/do-front-end-ao-back-end-usando-angular-4-e-java-em-containers-docker-5d0eba0fcbcc)  
 
+- [Churrops] [Do front-end ao back-end usando Angular 4 e Java em containers docker](http://churrops.io/2018/06/25/do-front-end-ao-back-end-usando-angular-4-e-java-em-containers-docker/)
 
 ### Dockerize
 
