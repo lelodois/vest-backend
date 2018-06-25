@@ -4,9 +4,7 @@ Versão backend do sistema de vestibular
 
 * ** Frontend ** - *Angular* - [Source code](https://github.com/lelodois/vestibular-frontend)
 
-### Começando
-
-Clone este projeto e execute os comandos abaixo na raiz do projeto:
+### Dockerize
 
 ```
   mvn install
